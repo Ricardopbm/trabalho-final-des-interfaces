@@ -25,10 +25,10 @@ export function setupApiInterativa(previewContainer) {
       secao.className = "mt-4 p-3 bg-light border rounded";
       secao.innerHTML = `
         <h4>Informações do Número</h4>
-        <p><strong>Número:</strong> ${dados.international_format}</p>
-        <p><strong>País:</strong> ${dados.country_name}</p>
+        <p><strong>Número:</strong> ${dados.phone}</p>
+        <p><strong>País:</strong> ${dados.country.name}</p>
         <p><strong>Operadora:</strong> ${dados.carrier}</p>
-        <p><strong>Tipo:</strong> ${dados.line_type}</p>
+        <p><strong>Tipo:</strong> ${dados.type}</p>
         <p><strong>Localização:</strong> ${dados.location}</p>
       `;
 
