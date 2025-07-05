@@ -1,0 +1,126 @@
+ body {
+     font-family: 'Segoe UI', sans-serif;
+     margin: 0;
+     padding: 0;
+     display: flex;
+     min-height: 100vh;
+     background-color: #f2f2f2;
+ }
+
+ #sidebar {
+     width: 400px;
+     background: #ffffff;
+     padding: 20px;
+     box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+     overflow-y: auto;
+     transition: all 0.3s;
+ }
+
+ #sidebar.collapsed {
+     margin-left: -380px;
+ }
+
+ #main-content {
+     flex: 1;
+     display: flex;
+     flex-direction: column;
+     padding: 20px;
+ }
+
+ #preview-container {
+     flex: 1;
+     background: white;
+     border-radius: 8px;
+     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+     margin-bottom: 20px;
+     overflow: auto;
+ }
+
+ #preview {
+     min-height: 100%;
+     padding: 20px;
+ }
+
+ #codigoHtml {
+     width: 100%;
+     min-height: 200px;
+     font-family: monospace;
+ }
+
+ .form-section {
+     margin-bottom: 2rem;
+     border-bottom: 1px solid #eee;
+     padding-bottom: 1rem;
+ }
+
+ .form-section h5 {
+     cursor: pointer;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+
+ .form-section h5::after {
+     content: "+";
+ }
+
+ .form-section.expanded h5::after {
+     content: "−";
+ }
+
+ .form-section .section-content {
+     display: none;
+ }
+
+ .form-section.expanded .section-content {
+     display: block;
+ }
+
+ .color-label {
+     font-size: 0.8rem;
+     margin-bottom: 0.2rem;
+     color: #666;
+ }
+
+ .menu-item {
+     margin-right: 10px;
+     padding: 5px 10px;
+     cursor: pointer;
+     transition: all 0.2s;
+ }
+
+ .menu-item:hover {
+     background-color: rgba(0, 0, 0, 0.1);
+     border-radius: 4px;
+ }
+
+ .form-field {
+     display: flex;
+     gap: 10px;
+     margin-bottom: 10px;
+     align-items: center;
+ }
+
+ .form-field select {
+     flex: 1;
+ }
+
+ .form-field input {
+     flex: 2;
+ }
+
+ .toggle-sidebar {
+     position: fixed;
+     left: 10px;
+     top: 10px;
+     opacity: 0.4;
+     z-index: 1000;
+ }
+
+ .update-btn {
+     position: fixed;
+     right: 30px;
+     bottom: 30px;
+     z-index: 1000;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+ }
